@@ -1,0 +1,35 @@
+<section>
+  <div>
+    <h1>
+      Cadastrar Novo Produto
+    </h1>
+  </div>
+
+
+  <form [formGroup]="productForm">
+    <label for="title">Title</label>
+    <input id="title" formControlName="title"/>
+
+    <label for="description" >description</label>
+    <input id="description" formControlName="description"/>
+
+    <label for="ownerId" >ownerId</label>
+    <input id="ownerId" formControlName="ownerId"/>
+
+    <label for="price" >price</label>
+    <input id="price" formControlName="price"/>
+
+    <label for="categoryId" >categoryId</label>
+    <input id="categoryId" formControlName="categoryId"/>
+
+
+    <app-btn-primary
+    btn-text="Enviar"
+    (submit)="onSubmit()"
+    [disabled]="!productForm.valid"
+    [loading]="loading()">
+    </app-btn-primary>
+  </form>
+
+</section>
+

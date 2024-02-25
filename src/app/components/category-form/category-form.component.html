@@ -1,0 +1,29 @@
+<section>
+  <div>
+    <h1>
+      Cadastrar Nova Categoria
+    </h1>
+  </div>
+
+
+  <form [formGroup]="categoryForm" name="Categoria">
+    <label for="title">Title</label>
+    <input id="title" formControlName="title"/>
+
+    <label for="description" >description</label>
+    <input id="description" formControlName="description"/>
+
+    <label for="ownerId" >ownerId</label>
+    <input id="ownerId" formControlName="ownerId"/>
+
+
+    <app-btn-primary
+    btn-text="Enviar"
+    (submit)="onSubmit()"
+    [disabled]="!categoryForm.valid"
+    [loading]="loading()">
+    </app-btn-primary>
+  </form>
+
+</section>
+

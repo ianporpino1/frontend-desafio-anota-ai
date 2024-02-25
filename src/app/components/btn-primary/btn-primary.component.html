@@ -1,0 +1,9 @@
+<button (click)="submit()"
+        [disabled]="disabled"
+    >
+    @if(!loading){
+      {{ btnText }}
+    }@else {
+      carregando...
+    }
+</button>
